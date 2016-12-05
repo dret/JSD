@@ -1,2 +1,3 @@
 # JSD
-JSON Schema Definition
+
+The repository for *JSD*, the *JSON Schema Definition* language.
