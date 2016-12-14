@@ -17,7 +17,7 @@
     <xsl:param name="JSONPath"/>
     <xsl:for-each select="*">
       <xsl:apply-templates select=".">
-        <xsl:with-param name="JSONPath" select="concat($JSONPath, ../@key, '[', position() ,']')"/>
+        <xsl:with-param name="JSONPath" select="concat($JSONPath, ../@key, '[', position()-1 ,']')"/>
       </xsl:apply-templates>
     </xsl:for-each>
   </xsl:template>
