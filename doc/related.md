@@ -3,7 +3,9 @@
 ## Languages
 
 * [JSON Schema `draft-wright-json-schema`](https://tools.ietf.org/html/draft-wright-json-schema) (continuation of `draft-zyp-json-schema`)
+* [JSON Content Rules (JCR) `draft-newton-json-content-rules`](https://tools.ietf.org/html/draft-newton-json-content-rules)
 * [JSON Schema `draft-zyp-json-schema`](https://tools.ietf.org/html/draft-zyp-json-schema) (replaced by `draft-wright-json-schema`)
+
 
 ## Blog Posts
 
