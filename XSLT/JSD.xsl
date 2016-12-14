@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs" version="3.0" xpath-default-namespace="http://www.w3.org/2005/xpath-functions" xmlns="http://www.w3.org/2005/xpath-functions">
   <xsl:output method="text"/>
+  <xsl:variable name="input" select="('RFC7159-example-1.json', 'RFC7159-example-2.json')"/>
   <xsl:template match="/">
-    <xsl:variable name="JSON" select="json-to-xml(unparsed-text('test.json'))"/>
-    <xsl:apply-templates select="$JSON/*">
-      <xsl:with-param name="JSONPath" select="'$'"/>
-    </xsl:apply-templates>
+    <xsl:for-each select="$input">
+      <xsl:value-of select="concat(. ,':&#xa;')"/>
+      <xsl:apply-templates select="json-to-xml(unparsed-text(.))/*">
+        <xsl:with-param name="JSONPath" select="'  $'"/>
+      </xsl:apply-templates>
+      <xsl:text>&#xa;</xsl:text>
+    </xsl:for-each>
   </xsl:template>
   <xsl:template match="map">
     <xsl:param name="JSONPath"/>
