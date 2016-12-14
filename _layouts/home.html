@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  {{ content }}
+
+  <h1 class="page-heading">Recent Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts limit:5 %}
+      <li>
+        <h2>
+          <a class="post-link" href="{{ post.url | relative_url }}"><span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} — </span> {{ post.title | escape }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+<p class="rss-subscribe">For a complete list, <a href="{{ "/history.html" | prepend: site.baseurl }}">here is the history of all updates</a>; you can subscribe to updates <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via the feed</a>.</p>
+
+</div>
