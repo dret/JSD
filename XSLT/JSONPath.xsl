@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- "JSONPath" accepts a JSON string as input and returns a sequence of JSONPath expressions for each individual value in the JSON input. XSLT 3.0 is required. -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs" version="3.0" xpath-default-namespace="http://www.w3.org/2005/xpath-functions" xmlns="http://www.w3.org/2005/xpath-functions">
   <xsl:output method="text"/>
   <xsl:template name="JSONPath">
