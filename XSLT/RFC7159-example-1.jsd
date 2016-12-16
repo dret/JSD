@@ -1,0 +1,20 @@
+{
+  "$root": "RFC7159-example-1",
+  "RFC7159-example-1": {"$object": {"$members": [{"Image": "Image"}]}},
+  "Image": {"$object": {"members": [
+    {"Width": "Width"},
+    {"Height": "Height"},
+    {"Title": "$string"},
+    {"Thumbnail": "Thumbnail"},
+    {"Animated": "$boolean"},
+    {"IDs": "IDs"}
+  ]}},
+  "Thumbnail": {"$object": {"$members": [
+    {"Url": "$xs:anyURI"},
+    {"Height": "Height"},
+    {"Width": "Width"}
+  ]}},
+  "IDs": {"$array": {"$values": [{"$number": {4, 4}}]}},
+  "Width": {"$number": {}},
+  "Height": {"$number": {}}
+}

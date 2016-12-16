@@ -1,0 +1,48 @@
+<jsd xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <value id="$root" value="RFC7159-example-1"/>
+  <value id="RFC7159-example-1">
+    <object>
+      <members>
+        <member name="Image" value="Image"/>
+      </members>
+    </object>
+  </value>
+  <value id="Image">
+    <object>
+      <members>
+        <member name="Width" value="Width"/>
+        <member name="Height" value="Height"/>
+        <member name="Title">
+          <string/>
+        </member>
+        <member name="Thumbnail" value="Thumbnail"/>
+        <member name="Animated">
+          <boolean/>
+        </member>
+        <member name="IDs" value="IDs"/>
+      </members>
+    </object>
+  </value>
+  <value id="Thumbnail">
+    <object>
+      <member name="Url">
+        <xs:anyURI/>
+      </member>
+      <member name="Height" value="Height"/>
+      <member name="Width" value="Width"/>
+    </object>
+  </value>
+  <value id="IDs">
+    <array>
+      <values>
+        <number minOccur="4" maxOccur="4"/>
+      </values>
+    </array>
+  </value>
+  <value id="Width">
+    <number/>
+  </value>
+  <value id="Height">
+    <number/>
+  </value>
+</jsd>
